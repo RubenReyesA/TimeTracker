@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".InfoTask">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:theme="@style/ToolBarTheme.ToolBarStyle">
+
+        <!-- Toolbar is the actual app bar with text and the action items -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appbar"
+            android:minHeight="?attr/actionBarSize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@android:color/white"
+            android:background="?attr/colorPrimary"
+            app:layout_scrollFlags="enterAlways">
+        </androidx.appcompat.widget.Toolbar>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/Name" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/Description" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/ProjectRoot" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/StartDate" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/EndDate" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/Duration" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/NumberofIntervals" />
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="175dp"
+                android:gravity="center_vertical"
+                android:text="@string/FullPathTitle"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/NameTask"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:text="Task_1"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/DescriptionTask"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:text="Aqui va la descripcio"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/ProjectTaskRoot"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:ellipsize="end"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:lines="1"
+                android:singleLine="true"
+                android:text="Disseny del Software (DS)"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/StartDateTask"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:text="20-12-2019"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/EndDateTask"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:text="26-12-2019"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/DurationTask"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:text="00:23:54"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/NumberIntervalsTask"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:enabled="false"
+                android:gravity="center_vertical"
+                android:text="5"
+                android:textAlignment="center" />
+
+            <EditText
+                android:id="@+id/FullPath"
+                android:layout_width="match_parent"
+                android:layout_height="175dp"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:enabled="false"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

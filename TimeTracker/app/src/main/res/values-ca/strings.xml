@@ -1,0 +1,172 @@
+<resources>
+    <!--- General Information -->
+    <string name="app_name">Time Tracker</string>
+    <string name="GenerateReports">Generar Informes</string>
+    <string name="TasksRunning">Tasques en curs</string>
+    <string name="GotoReports">Veure Informes</string>
+
+    <!--- Titles for Contextual Menu -->
+    <string name="OrderBy">Ordenar per</string>
+    <string name="GenerateReport">Generar Informe</string>
+    <string name="SaveTree">Desar dades</string>
+    <string name="Info">Informació</string>
+    <string name="Edit">Editar</string>
+    <string name="Delete">Eliminar</string>
+    <string name="Settings">Configuració</string>
+    <string name="About">Informació App</string>
+
+    <!--- Options SortBy ListView Projects -->
+    <string-array name="orders_projects">
+        <item>Alfabèticament</item>
+        <item>Recentment</item>
+    </string-array>
+
+    <!--- Options SortBy ListView Activities -->
+    <string-array name="orders_activities">
+        <item>Alfabèticament</item>
+        <item>Recentment</item>
+        <item>Per tipus</item>
+    </string-array>
+
+    <!--- Options Languages Settings -->
+    <string name="Language">Llengües:</string>
+    <string name="LanguageText">Per canviar la llengua al Castellà, Català o Anglès, si us plau, canviï la llengua del sistema.</string>
+    <string-array name="LanguagesArray">
+        <item>Anglès</item>
+        <item>Castellà</item>
+        <item>Català</item>
+    </string-array>
+    <string-array name="LanguagesCode">
+        <item>en</item>
+        <item>es</item>
+        <item>ca</item>
+    </string-array>
+    <string name="DelaySeg">"Segons Retard: "</string>
+    <string name="DeleteALL">Eliminar tota la configuració i dades </string>
+    <string name="seg">seg</string>
+    <string name="changes">Si us plau, reiniciï la app per aplicar els canvis</string>
+
+    <!--- Create & Edit Task / Project -->
+    <string name="EditTask">Editar Tasca</string>
+    <string name="EditProject">Editar Projecte</string>
+    <string name="CreateTask">Crear Tasca</string>
+    <string name="CreateProject">Crear Projecte</string>
+    <string name="InfoTask">Informació de la tasca</string>
+    <string name="InfoProject">Informació del projecte</string>
+
+    <string name="Preprogramada"> Preprogramada:</string>
+    <string name="DatePreprogramada"> Seleccioni data:</string>
+    <string name="Limited"> Limitada: </string>
+    <string name="TimeLimited"> Temps en minuts:</string>
+
+    <string name="Name">Nom:</string>
+    <string name="ProjectRoot">Projecte Arrel:</string>
+    <string name="Description">Descripció:</string>
+    <string name="StartDate">Data inicial:</string>
+    <string name="EndDate">Data final:</string>
+    <string name="Duration">Duració:</string>
+    <string name="NumberofIntervals">Nº Intervals:</string>
+    <string name="NumberofTasks">Nº Tasca:</string>
+    <string name="NumberofSubProjects">Nº Subprojectes:</string>
+    <string name="ConfirmChanges">OK</string>
+    <string name="Create">Crear</string>
+
+    <string name="FullPathTitle"> Ruta completa:</string>
+
+    <!--- Generate Reports -->
+    <string name="ProjectReport">Projecte:</string>
+    <string name="FormatReport">Format:</string>
+    <string name="TypeReport">Tipus:</string>
+    <string name="DateReport">Periode:</string>
+    <string name="StartDateReport">Data inicial:</string>
+    <string name="EndDateReport">Data final:</string>
+    <string name="CreateBtnReport">CREAR</string>
+
+    <!--- Options Format Generate Reports -->
+    <string-array name="formatReports">
+        <item>Web</item>
+        <item>Text</item>
+    </string-array>
+
+    <!--- Options Type Generate Reports -->
+    <string-array name="typeReports">
+        <item>Bàsic</item>
+        <item>Detallat</item>
+    </string-array>
+
+    <!--- Options Period Generate Reports -->
+    <string-array name="dateReports">
+        <item>Avui</item>
+        <item>Ahir</item>
+        <item>La setmana passada</item>
+        <item>La darrera setmana des de avui</item>
+        <item>El mes passat</item>
+        <item>El darrer mes des de avui</item>
+        <item>L\'any passat</item>
+        <item>El darrer any des de avui</item>
+        <item>Personalizat</item>
+    </string-array>
+
+    <!--- Reports Generate Automatically Periods -->
+    <string name="TimeStart">00:00:00</string>
+    <string name="TimeFinish">23:59:59</string>
+
+    <!--- Empty ListView -->
+    <string name="NoProjectsRoot">No hi ha cap projecte creat encara!</string>
+    <string name="NoActivities">No hi ha activitats creades encara!</string>
+    <string name="NoIntervals">No hi ha intervals encara para aquesta tasca!</string>
+    <string name="NoTasksRunning">No hi ha tasques en curs ara mateix!</string>
+    <string name="NoReports">No hi ha cap informe creat encara!</string>
+
+    <!--- Intervals Information -->
+    <string name="Duration_Interval">Duració</string>
+    <string name="StartDateEndDate_Interval">Data inicial / Data final</string>
+    <string name="NumberofIntervals_Interval">Nº Intervals:</string>
+    <string name="NumberofTasks_Running">Nº Tasques en curs:</string>
+
+
+    <!--- Info for TasksRunning -->
+    <string name="Play">Iniciar</string>
+    <string name="Pause">Pausar</string>
+    <string name="Stop">Aturar</string>
+
+    <!--- Info for about -->
+    <string name="info_about">Aquesta app ha sido desenvolupada pel team OGERICO</string>
+
+
+    <!--- Errors -->
+    <string name="ErrorEmptyName">No es permet un nom buit</string>
+    <string name="GrantedPermission">" Has permès el permís d\'escriptura. Fes click en el botó CREAR de nou."</string>
+    <string name="DeniedPermission">Has denegat el permís d\'escriptura. L\'informe no es generarà</string>
+
+    <!--- Transitions -->
+    <string name="FabTransition"> fab_transition </string>
+
+    <!--- Messages -->
+    <string name="TreeSavedMSG">Tota la informació s\'ha desat amb èxit!</string>
+    <string name="AreTasksRunningTitle">Tasques en curs</string>
+    <string name="AreTasksRunning">Hi ha tasques executant-se. Si forces el tancament, les tasques s\'aturaran.</string>
+    <string name="AreTasksRunningYES">Forçar el tancament i aturar les tasques</string>
+    <string name="AreTasksRunningNO">Cancel·lar i anar a Tasques en Curs</string>
+
+    <string name="DeleteALLTitle">Eliminar tota la configuració i dades</string>
+    <string name="DeleteALLmsg">Totes les dades seran eliminades i l\'aplicació es tancarà. Estàs segur de continuar? (Aquesta operació no pot ser desfeta)</string>
+    <string name="DeleteALLYES">Sí</string>
+    <string name="DeleteALLNO">No</string>
+
+    <string name="items_selected">elements sel·leccionats</string>
+    <string name="choose_order">Sel·leccioni l\'ordre</string>
+
+    <!--- Reports messages && Delete message && Share Message-->
+    <string name="Reports">Informes</string>
+    <string name="ReportsDelete">Aquest informe no existeix. Si us plau, elimina aquesta entrada!</string>
+    <string name="DeleteQuestion">Eliminar?</string>
+    <string name="DeleteEntry">Està segur que vol eliminar aquesta entrada?</string>
+    <string name="DeleteFile">Està segur que vol eliminar aquest fitxer?</string>
+    <string name="DeleteProject">Està segur que vol eliminar aquest(s) projecte(s)?</string>
+    <string name="DeleteActivity">Està segur que vol eliminar aquesta(es) activitat(s)?</string>
+    <string name="Cancel">Cancel·lar</string>
+    <string name="ShareReport">Compartir informe</string>
+    <string name="SendReport">Enviant l\'informe:</string>
+    <string name="ShareFAB">COMPARTIR</string>
+</resources>

@@ -1,0 +1,286 @@
+@startuml
+abstract class Group{
+- gName : String 
+- gDescription: String 
+- gStartDate: Date  
+- gEndDate: Date 
+- gDuration: int
+- gFather: Group
++ {static} PATTERN : final String
++ {static} LOCATION: final Locale
++ Group()
++ Group(final String nom, final String desc)
++ getGName() : String
++ getGFatherName() : String
++ getGFather() : Group
++ getGDescription() : String
++ getGDuration() : int
++ getGStartDate() : Date
++ getGStartDateString : String
++ setGStartDate(final Date d) : void
++ getGEndDate() : Date
++ getGEndDateString() : String
++ setGEndDate(final Date d) : void
++ setGFather(final Group gF) : void
++ propagateChanges(final Date startDate, final Date endDate) : void
++ {abstract} accept(Visitor v) : void
++ comparePeriod(final Date startReport, final Date endReport) : boolean
+}
+class Project{
+- pGroupList: List<Group>
++ Project(final String name, final String desc)
++ addGroup(final Group g) : void
++ getPGroupList() : List<Group>
++ accept(final Visitor v) : void
++ getSubProjects(final Period p, final boolean isRecursive) : List<Project> 
++ getTasks(final Period p) : List<Task>
+}
+class Task
+{
+- tIntervals : List<Interval>
+- tLastInterval : Interval
+- {static} logger : Logger
+- invariant() : boolean
++ Task(final String name, final String desc)
++ start() : void
++ stop() : void
++ getTIntervals() : List<Interval>
++ getTIntervals(final Period p) : List<Interval>
++ accept(final Visitor v) : void
++ lookForInterval(final Interval i) : int
+}
+class Client
+{
+- cProjects : List<Project>
+- clock : Clock 
+- option : int
+- read : int
+
++ Client()
++ print(): void
++ saveData() : void
++ readData() : void
++ main1() : void
++ main2() : void
++ main3() : void
++ main4() : void
+}
+abstract class Timer{
+}
+class Clock{
+- clockTask: ClockTask
+- clockCounterSeg: int
+- {static} clockUniqueInstance : Clock
+- {static} logger: Logger
++ {static} MILISEG2SEG: final int
+- Clock()
++ {static} getInstance() : synchronized Clock
++ getClockTask() : ClockTask
++ getClockCounterSeg() : int
++ insertListenerClock(final PropertyChangeListener pcl) : void
++ removeListenerClock(final PropertyChangeListener pcl) : void
+}
+class ClockTask{
+- support : final PropertyChangeSupport
+- cTaskLast: Date
+- {static} logger: Logger
++ ClockTask()
++ addPropertyChangeListener(final PropertyChangeListener pcl) : void
++ removePropertyChangeListener(final PropertyChangeListener pcl) : void
++ run() : void
+}
+abstract class TimerTask{
+}
+class Interval{
+- iStartDate: Date
+- iEndDate: Date
+- iTask: Task
+- iDuration: int
++ {static} PATTERN : final String
++ {static} LOCATION: final Locale
++ Interval()
++ Interval(final Task t)
++ getIStartDate() : Date
++ getIEndDate() : Date
++ getITask() : Task
++ getIDuration() : int
++ propertyChange(final PropertyChangeEvent evt) : void
++ comparePeriod(final Date startReport, final Date endReport) : boolean
++ getITaskName() : String
++ getIProjectName() : String
++ getPositioninTaskList() : int
++ getIStartDateString() : String
++ getIEndDateString() : String
+}
+Interface Serializable{
+}
+Interface PropertyChangeSupport{
+}
+Interface Visitor{
++ visitProject(Project p) : void
++ visitTask(Task t) : void
+}
+class Print{
++ {static} PATTERN : final String
++ {static} LOCATION: final Locale
++ {static} HOUR2SEG : final int
++ {static} MIN2SEG: final int
++ {static} DECIMAL: final int
++ {static} formatSeconds(final int timeInSeconds) : String
++ visitProject(final Project p) : void
++ visitTask(final Task t) : void
+}
+
+Interface Serializable{
+}
+
+class Period{
+- pStartDate : Date
+- pEndDate : Date
+- pCurrentDate : Date
++ {static} PATTERN : final String
++ {static} LOCATION: final Locale
++ Period(final Date startDate, final Date endDate)
++ getPStartDate() : Date
++ getPEndDate() : Date
++ getPCurrentDate() : Date
++ getPStartDateString() : String
++ getPEndDateString() : String
++ getPCurrentDateString() : String
+}
+
+abstract class Report{
+- rProjecte : Project
+- rPeriod : Period
+- rElements : List<Elements>
++ {static} HOUR2SEG : final int
++ {static} MIN2SEG: final int
++ Report(final Project project, final Period period)
++ getRProject() : Project
++ getRPeriod() : Period
++ getRPeriodStartDateString() : String
++ getRPeriodEndDateString() : String
++ getRPeriodCurrentDateString() : String
++ getPeriodProjects(final Period p, final boolean r) : List<Project>
++ {abstract} writeReport() : void
++ buildReport(final Format f) : void
++ {static} formatSeconds(final int timeInSeconds) : String
++ addtoListofElements(final Elements e) : void
+}
+
+class RBasic{
++ RBasic(final Project rProject, final Period rPeriod)
++ writeReport() : void
+}
+
+class RDetailed{
++ RDetailed(final Project rProject, final Period rPeriod)
++ writeReport() : void
+}
+
+Interface Elements{
++ accept(Format f) : void
+}
+
+class ESeparator{
++ ESeparator()
++ accept(final Format f) : void 
+}
+
+class ESubTitle{
+- text : String
++ ESubTitle(final String t)
++ getText() : String
++ accept(final Format f) : void 
+}
+
+class ETableInfo{
+- tableNRows : int
+- tableNColumns : int
+- tableInfo : String[][]
++ ETableInfo(final int nrows, final int ncolumns)
++ getTableNRows() : int
++ getTableNColumns() : int
++ getTableInfo() : String[][]
++ getTableInfoValue() : String
++ accept(final Format f) : void 
++ setContent(final int f, final int c, final String d) : void
+}
+
+class EText{
+- text : String
++ EText(final String t)
++ getText() : String
++ accept(final Format f) : void 
+}
+
+class ETitle{
+- text : String
++ ETitle(final String t)
++ getText() : String
++ accept(final Format f) : void 
+}
+
+Interface Format{
++ visitTitle(ETitle t) : void
++ visitSubTitle(ESubTitle st) : void
++ visitSeparator(ESeparator s) : void
++ visitTableInfo(ETableInfo ti) : void
++ visitText(EText text) : void
++ closeWriter() : void
+}
+
+class FText{
+- writer : PrintWriter
++ FText(final String name)
++ closeWriter() : void
++ visitTitle(final ETitle t) : void
++ visitSubTitle(final ESubTitle st) : void
++ visitSeparator(final ESeparator s) : void
++ visitTableInfo(final ETableInfo ti) : void
++ visitText(final EText text) : void
+}
+
+class FHTML{
+- writer : PrintWriter
+- html : ContainerTag
+- head : ContainerTag
+- body : ContainerTag
++ FHTML(final String name)
++ closeWriter() : void
++ visitTitle(final ETitle t) : void
++ visitSubTitle(final ESubTitle st) : void
++ visitSeparator(final ESeparator s) : void
++ visitTableInfo(final ETableInfo ti) : void
++ visitText(final EText text) : void
+}
+
+
+Group <|-- Project : extends
+Group <|-- Task : extends
+Project "1" *-- "1..n"Group
+Client "1" *-- "1..n" Group : has
+Client "0..n" *-- "1" Clock : has
+Timer <|-- Clock : extends
+TimerTask <|-- ClockTask : extends
+Task "1"*-- "0..n"Interval : has
+Serializable <|-- Interval : implements
+Serializable <|-- Group : implements
+PropertyChangeSupport <|-- Interval : implements
+Visitor <|-- Print : implements
+Clock "1" -- "1" ClockTask : has
+Report --> "1" Period : has
+Report "1" *-- "1..n" Elements : has
+Report <|-- RBasic : extends
+Report <|-- RDetailed : extends
+Report -- Format : is 
+Report --> Project : of a
+Elements <|-- ESeparator : extends
+Elements <|-- ESubTitle : extends
+Elements <|-- ETableInfo : extends
+Elements <|-- EText : extends
+Elements <|-- ETitle : extends
+Elements <|-- ESeparator : extends
+Format <|-- FText : extends
+Format <|-- FHTML : extends
+@enduml

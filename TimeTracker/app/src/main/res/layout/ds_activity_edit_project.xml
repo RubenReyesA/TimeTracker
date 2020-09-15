@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:fitsSystemWindows="true"
+    android:layout_height="match_parent"
+    tools:context=".EditProject">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/ToolBarTheme.ToolBarStyle"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Toolbar is the actual app bar with text and the action items -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollFlags="enterAlways"
+            app:titleTextColor="@android:color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/Name"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/Description"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/ProjectRoot"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/StartDate"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/EndDate"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/Duration"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/NumberofTasks"
+                />
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/NumberofSubProjects"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/NameProject"
+                android:layout_width="match_parent"
+                android:singleLine="true"
+                android:inputType="text"
+                android:textAlignment="center"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"/>
+            <EditText
+                android:id="@+id/DescriptionProject"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:inputType="text"
+                android:singleLine="true"
+                android:gravity="center_vertical"/>
+            <EditText
+                android:id="@+id/ProjectProjectRoot"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="Root"
+                android:textAlignment="center"
+                android:lines="1"
+                android:ellipsize="end"
+                android:inputType="text"
+                android:singleLine="true"
+                android:enabled="false"/>
+            <EditText
+                android:id="@+id/StartDateProject"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:text="22-12-2019"
+                android:gravity="center_vertical"
+                android:enabled="false"/>
+            <EditText
+                android:id="@+id/EndDateProject"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="31-12-2019"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:enabled="false"/>
+            <EditText
+                android:id="@+id/DurationProject"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="01:59:25"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:enabled="false"/>
+            <EditText
+                android:id="@+id/NumberTasks"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="50"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:enabled="false"/>
+            <EditText
+                android:id="@+id/NumberSubProjects"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="2"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:enabled="false"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/editProjectFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@android:color/black"
+        android:text="@string/ConfirmChanges"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_check_white"
+        app:iconTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_info"
+        android:title="@string/Info"
+        android:icon="@drawable/ic_info_outline_white"
+        app:showAsAction="ifRoom" />
+    
+    <item
+        android:id="@+id/action_report"
+        android:title="@string/GenerateReport"
+        android:icon="@drawable/ic_assessment_white"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort_by_alpha_white"
+        app:showAsAction="ifRoom"
+        android:title="@string/OrderBy">
+    </item>
+
+</menu>

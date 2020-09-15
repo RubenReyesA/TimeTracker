@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GenerateReport">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:theme="@style/ToolBarTheme.ToolBarStyle"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <!-- Toolbar is the actual app bar with text and the action items -->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            app:layout_scrollFlags="enterAlways"
+            app:titleTextColor="@android:color/white"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/Name"
+                />
+
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/ProjectReport"
+                />
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/FormatReport"
+                />
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/TypeReport"
+                />
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/DateReport"
+                />
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/StartDateReport"
+                />
+            <TextView
+                android:layout_width="75dp"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:text="@string/EndDateReport"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <EditText
+                android:id="@+id/NameReport"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:singleLine="true"
+                android:textAlignment="center"
+                android:gravity="center_vertical"/>
+            <EditText
+                android:id="@+id/ProjectReport"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textAlignment="center"
+                android:gravity="center_vertical"
+                android:enabled="false"/>
+            <Spinner
+                android:id="@+id/FormatReport"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:entries="@array/formatReports"/>
+            <Spinner
+                android:id="@+id/TypeReport"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:entries="@array/typeReports"/>
+            <Spinner
+                android:id="@+id/DateReport"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center_vertical"
+                android:textAlignment="center"
+                android:entries="@array/dateReports"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/StartReport"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:focusable="false"
+                    android:enabled="false"/>
+                <EditText
+                    android:id="@+id/StartReportTime"
+                    android:layout_width="match_parent"
+                    android:layout_weight="1"
+                    android:layout_height="50dp"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:focusable="false"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/EndReport"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:focusable="false"
+                    android:enabled="false"/>
+                <EditText
+                    android:id="@+id/EndReportTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:textAlignment="center"
+                    android:focusable="false"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/createReportFAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:backgroundTint="@android:color/black"
+        android:text="@string/CreateBtnReport"
+        android:textColor="@android:color/white"
+        app:icon="@drawable/ic_create"
+        app:iconTint="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintVertical_bias="0.976" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

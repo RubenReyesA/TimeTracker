@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.ds.timetracker">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo_app"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_logo_app_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <service
+            android:name="com.ds.timetracker.TreeManagerService"
+            android:enabled="true"
+            android:configChanges="locale"
+            android:screenOrientation="portrait">
+        </service>
+
+        <activity
+            android:name="com.ds.timetracker.ProjectsList"
+            android:configChanges="locale"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:configChanges="locale"
+            android:name="com.ds.timetracker.ActivitiesList"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity
+            android:configChanges="locale"
+            android:name="com.ds.timetracker.IntervalsList"
+            android:screenOrientation="portrait">
+        </activity>
+
+        <activity android:name="com.ds.timetracker.CreateProject"
+            android:configChanges="locale"
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ds.timetracker.CreateTask"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ds.timetracker.EditProject"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ds.timetracker.EditTask"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ds.timetracker.GenerateReport"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ds.timetracker.ShowReport"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ds.timetracker.InfoTask"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ds.timetracker.InfoProject"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ds.timetracker.Settings"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ds.timetracker.About"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ds.timetracker.TasksRunning"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+        <activity android:name="com.ds.timetracker.ReportsList"
+            android:configChanges="locale"
+            android:screenOrientation="portrait" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_sort_by_alpha_white"
+        app:showAsAction="always"
+        android:title="@string/OrderBy">
+    </item>
+
+    <item
+        android:id="@+id/action_report"
+        android:title="@string/GenerateReport"
+        android:icon="@drawable/ic_assessment_white"
+        app:showAsAction="always">
+
+    </item>
+
+    <item
+        android:id="@+id/action_save"
+        android:icon="@drawable/ic_save_white"
+        android:title="@string/SaveTree"
+        app:showAsAction="always">
+
+    </item>
+
+
+    <item
+        android:id="@+id/action_goToReports"
+        android:title="@string/GotoReports">
+    </item>
+
+    <item
+        android:id="@+id/action_tasks_running"
+        android:title="@string/TasksRunning">
+    </item>
+
+    <item
+        android:id="@+id/action_settings"
+        android:title="@string/Settings">
+    </item>
+
+    <item
+        android:id="@+id/action_about"
+        android:title="@string/About">
+    </item>
+
+</menu>

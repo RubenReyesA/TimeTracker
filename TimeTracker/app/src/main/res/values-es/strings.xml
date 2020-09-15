@@ -1,0 +1,172 @@
+<resources>
+    <!--- General Information -->
+    <string name="app_name">Time Tracker</string>
+    <string name="GenerateReports">Generar Informes</string>
+    <string name="TasksRunning">Tareas en Curso</string>
+    <string name="GotoReports">Ver Informes</string>
+
+    <!--- Titles for Contextual Menu -->
+    <string name="OrderBy">Ordenar por</string>
+    <string name="GenerateReport">Generar Informe</string>
+    <string name="SaveTree">Guardar datos</string>
+    <string name="Info">Información</string>
+    <string name="Edit">Editar</string>
+    <string name="Delete">Eliminar</string>
+    <string name="Settings">Ajustes</string>
+    <string name="About">Acerca de</string>
+
+    <!--- Options SortBy ListView Projects -->
+    <string-array name="orders_projects">
+        <item>Alfabéticamente</item>
+        <item>Recientemente</item>
+    </string-array>
+
+    <!--- Options SortBy ListView Activities -->
+    <string-array name="orders_activities">
+        <item>Alfabéticamente</item>
+        <item>Recientemente</item>
+        <item>Por tipos</item>
+    </string-array>
+
+    <!--- Options Languages Settings -->
+    <string name="Language">Idioma:</string>
+    <string name="LanguageText">Para cambiar el idioma entre Castellano, Catalán o Inglés, debe cambiar el idioma del sistema.</string>
+    <string-array name="LanguagesArray">
+        <item>Inglés</item>
+        <item>Español</item>
+        <item>Catalán</item>
+    </string-array>
+    <string-array name="LanguagesCode">
+        <item>en</item>
+        <item>es</item>
+        <item>ca</item>
+    </string-array>
+    <string name="DelaySeg">"Segundos Retraso: "</string>
+    <string name="DeleteALL">Eliminar toda la configuración y datos </string>
+    <string name="seg">seg</string>
+    <string name="changes">Por favor, reinicie la app para aplicar los cambios</string>
+
+    <!--- Create & Edit Task / Project -->
+    <string name="EditTask">Editar Tarea</string>
+    <string name="EditProject">Editar Proyecto</string>
+    <string name="CreateTask">Crear Tarea</string>
+    <string name="CreateProject">Crear Proyecto</string>
+    <string name="InfoTask">Información de la tarea</string>
+    <string name="InfoProject">Información del proyecto</string>
+
+    <string name="Preprogramada"> Preprogramada:</string>
+    <string name="DatePreprogramada"> Seleccione una fecha:</string>
+    <string name="Limited"> Limitada: </string>
+    <string name="TimeLimited"> Tiempo en minutos:</string>
+
+    <string name="Name">Nombre:</string>
+    <string name="ProjectRoot">Proyecto Raíz:</string>
+    <string name="Description">Descripción:</string>
+    <string name="StartDate">Fecha inicial:</string>
+    <string name="EndDate">Fecha final:</string>
+    <string name="Duration">Duración:</string>
+    <string name="NumberofIntervals">Nº Intervalos:</string>
+    <string name="NumberofTasks">Nº Tareas:</string>
+    <string name="NumberofSubProjects">Nº SubProyectos:</string>
+    <string name="ConfirmChanges">OK</string>
+    <string name="Create">Crear</string>
+
+    <string name="FullPathTitle"> Ruta Completa:</string>
+
+    <!--- Generate Reports -->
+    <string name="ProjectReport">Proyecto:</string>
+    <string name="FormatReport">Formato:</string>
+    <string name="TypeReport">Tipo:</string>
+    <string name="DateReport">Periodo:</string>
+    <string name="StartDateReport">Fecha inicial:</string>
+    <string name="EndDateReport">Fecha final:</string>
+    <string name="CreateBtnReport">CREAR</string>
+
+    <!--- Options Format Generate Reports -->
+    <string-array name="formatReports">
+        <item>Web</item>
+        <item>Texto</item>
+    </string-array>
+
+    <!--- Options Type Generate Reports -->
+    <string-array name="typeReports">
+        <item>Básico</item>
+        <item>Detallado</item>
+    </string-array>
+
+    <!--- Options Period Generate Reports -->
+    <string-array name="dateReports">
+        <item>Hoy</item>
+        <item>Ayer</item>
+        <item>La semana pasada</item>
+        <item>La última semana desde hoy</item>
+        <item>El mes pasado</item>
+        <item>El último mes desde hoy</item>
+        <item>El año pasado</item>
+        <item>El último año desde hoy</item>
+        <item>Personalizado</item>
+    </string-array>
+
+    <!--- Reports Generate Automatically Periods -->
+    <string name="TimeStart">00:00:00</string>
+    <string name="TimeFinish">23:59:59</string>
+
+    <!--- Empty ListView -->
+    <string name="NoProjectsRoot">No hay ningún proyecto creado aún!</string>
+    <string name="NoActivities">No hay actividades creadas aún!</string>
+    <string name="NoIntervals">No hay intervalos aún para esta tarea!</string>
+    <string name="NoTasksRunning">No hay tareas en curso ahora mismo!</string>
+    <string name="NoReports">No hay ningún informe creado aún!</string>
+
+    <!--- Intervals Information -->
+    <string name="Duration_Interval">Duración</string>
+    <string name="StartDateEndDate_Interval">Fecha inicial / Fecha final</string>
+    <string name="NumberofIntervals_Interval">Nº Intervalos:</string>
+    <string name="NumberofTasks_Running">Nº Tareas en Curso:</string>
+
+
+    <!--- Info for TasksRunning -->
+    <string name="Play">Iniciar</string>
+    <string name="Pause">Pausar</string>
+    <string name="Stop">Detener</string>
+
+    <!--- Info for about -->
+    <string name="info_about">Esta app ha sido desarrollada por el team OGERICO</string>
+
+
+    <!--- Errors -->
+    <string name="ErrorEmptyName">No se permite un nombre vacío</string>
+    <string name="GrantedPermission">" Has permitido el permiso de escritura. Haz click en el botón CREAR de nuevo."</string>
+    <string name="DeniedPermission">Has denegado el permiso de escritura. El informe no se generará</string>
+
+    <!--- Transitions -->
+    <string name="FabTransition"> fab_transition </string>
+
+    <!--- Messages -->
+    <string name="TreeSavedMSG">Toda la información se ha guardado con éxito!</string>
+    <string name="AreTasksRunningTitle">Tareas en Curso</string>
+    <string name="AreTasksRunning">Hay tareas ejecutándose. Si fuerzas el cierre, las tareas en curso se detendrán.</string>
+    <string name="AreTasksRunningYES">Forzar el cierre y detener</string>
+    <string name="AreTasksRunningNO">Cancelar e ir a Tareas en Curso</string>
+
+    <string name="DeleteALLTitle">Eliminar toda la configuración y datos</string>
+    <string name="DeleteALLmsg">Todos los datos serán eliminados y se cerrará la app. Está seguro que desea continuar? (Esta operación no puede ser revertida)</string>
+    <string name="DeleteALLYES">Sí</string>
+    <string name="DeleteALLNO">No</string>
+
+    <string name="items_selected">elementos seleccionados</string>
+    <string name="choose_order">Escoge el orden</string>
+
+    <!--- Reports messages && Delete message && Share Message-->
+    <string name="Reports">Informes</string>
+    <string name="ReportsDelete">Este informe no existe. Por favor, elimine esta entrada!</string>
+    <string name="DeleteQuestion">Eliminar?</string>
+    <string name="DeleteEntry">Está seguro que desea eliminar esta entrada?</string>
+    <string name="DeleteFile">Está seguro que desea eliminar este archivo?</string>
+    <string name="DeleteProject">Está seguro que desea eliminar este(os) proyecto(s)?</string>
+    <string name="DeleteActivity">Está seguro que desea eliminar esta(s) actividad(es)?</string>
+    <string name="Cancel">Cancelar</string>
+    <string name="ShareReport">Compartir informe</string>
+    <string name="SendReport">Enviando el informe:</string>
+    <string name="ShareFAB">COMPARTIR</string>
+</resources>
